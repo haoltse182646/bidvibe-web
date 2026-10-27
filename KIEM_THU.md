@@ -31,5 +31,5 @@ SHA-256 APK:
 - Bản chạy thông thường dùng backend Render, không dùng fixture. Dữ liệu QA không được trộn vào dashboard thật và không được dùng khi build production.
 - Chưa deploy landing page hoặc tạo/push repo GitHub. CORS của domain deploy mới cần kiểm tra sau deploy.
 - Đã đưa đúng APK vào website; chưa cài lại APK hoặc kiểm thử app Android trong phạm vi công việc landing page này.
-- Chưa chạy luồng thay đổi tiền, phiên, tài khoản hoặc tranh chấp trên database thật. Website Admin hiện chỉ theo dõi và xem chi tiết.
+- Chưa chạy luồng thay đổi tiền, phiên, tài khoản hoặc tranh chấp trên database thật. Bản bàn giao ban đầu chỉ theo dõi và xem chi tiết; bản nâng cấp đã bổ sung thao tác quản trị, xem ADMIN_KIEM_THU.md.
 - Kiểm tra giao diện bằng trình duyệt trên máy; chưa kiểm tra trên điện thoại vật lý hoặc toàn bộ các trình duyệt khác nhau.
