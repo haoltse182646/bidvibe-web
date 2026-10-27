@@ -4,6 +4,7 @@ import { createApi } from './api';
 import Landing from './Landing';
 import Admin from './Admin';
 import './styles.css';
+import './admin-upgrade.css';
 
 function App() {
   const [route, setRoute] = useState(location.hash);
@@ -16,7 +17,7 @@ function App() {
     window.addEventListener('hashchange', change);
     return () => window.removeEventListener('hashchange', change);
   }, []);
-  useEffect(() => { document.title = isAdmin ? 'BidVibe — Quản trị' : 'BidVibe — Món đồ độc đáo. Trải nghiệm xứng đáng.'; window.scrollTo(0, 0); }, [isAdmin]);
+  useEffect(() => { document.title = isAdmin ? 'BidVibe — Quản trị' : 'BidVibe — Đấu giá đồ cổ. Tiếp nối giá trị xưa.'; window.scrollTo(0, 0); }, [isAdmin]);
   return isAdmin ? <Admin api={api} session={session} setSession={setSession} /> : <Landing />;
 }
 createRoot(document.getElementById('root')).render(<React.StrictMode><App /></React.StrictMode>);

@@ -28,7 +28,7 @@ export function createApi(base, getToken = () => null, onUnauthorized = () => {}
     } catch (error) {
       if (error instanceof ApiError) throw error;
       if (signal?.aborted) throw error;
-      throw new ApiError(error.name === 'AbortError' ? 'Máy chủ phản hồi chậm. Vui lòng thử lại sau một phút.' : 'Không kết nối được máy chủ. Kiểm tra Internet và cấu hình CORS của backend.');
+      throw new ApiError(error.name === 'AbortError' ? 'Máy chủ phản hồi chậm. Vui lòng thử lại sau một phút.' : 'Chưa thể kết nối với hệ thống. Vui lòng kiểm tra Internet hoặc liên hệ nhóm hỗ trợ.');
     } finally { clearTimeout(timeout); signal?.removeEventListener('abort', abort); }
   };
 }

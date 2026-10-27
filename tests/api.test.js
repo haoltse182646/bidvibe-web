@@ -34,7 +34,7 @@ test('forbidden permissions do not silently render successful dashboard data',as
 });
 test('network and invalid JSON errors have readable error messages',async t=>{
   const mocked=t.mock.method(globalThis,'fetch',async()=>{throw new TypeError('Failed to fetch');});
-  await assert.rejects(createApi('https://example.test')('/admin/dashboard'),error=>error instanceof ApiError && error.message.includes('CORS'));
+  await assert.rejects(createApi('https://example.test')('/admin/dashboard'),error=>error instanceof ApiError && error.message.includes('Internet'));
   mocked.mock.mockImplementation(async()=>new Response('<html>Bad gateway</html>',{status:502}));
   await assert.rejects(createApi('https://example.test')('/admin/dashboard'),error=>error.status===502);
 });

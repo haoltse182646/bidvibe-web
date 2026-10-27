@@ -83,7 +83,7 @@ Sửa nội dung tại `src/Landing.jsx`, giao diện tại `src/styles.css`.
 
 Phản hồi đúng contract `{ success, data, error }`. Gửi `Authorization: Bearer <token>` với request có bảo vệ. Mỗi request giới hạn chờ 60 giây. Có loading, lỗi kết nối, nút thử lại, trang trống và phân trang 20 bản ghi cho danh sách API có hỗ trợ.
 
-**Phạm vi Admin hiện tại là dashboard theo dõi.** Chưa thêm thao tác khóa/mở tài khoản, tạo nhân sự, phán quyết tranh chấp hoặc chấm dứt phiên. Các API ghi này có trong backend nhưng không được website gọi. Có thể dùng ứng dụng quản trị hiện tại để xử lý.
+**Admin đã hỗ trợ cả 11 endpoint quản trị:** 6 đọc và 5 ghi. Có tạo/sửa nhân sự, khóa/mở người dùng, xử lý cờ nghi vấn và phán quyết tranh chấp, cùng 4 biểu đồ tròn mới. Xem [ADMIN_CHUC_NANG.md](ADMIN_CHUC_NANG.md) để biết chi tiết, hệ quả của thao tác và phạm vi kiểm tra.
 
 Biểu đồ thể hiện trạng thái đơn hàng và GMV theo danh mục; backend hiện chưa trả chuỗi doanh thu theo ngày. Không tạo số tăng trưởng hoặc doanh thu giả.
 
